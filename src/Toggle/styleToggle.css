@@ -1,0 +1,66 @@
+.toggle{
+    height: 100px;
+    width: 200px;
+    border-radius: 50px;
+    margin: auto;
+    background-image: linear-gradient(brown, midnightblue);
+    position: relative;
+}
+
+.notch{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background: whitesmoke;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    box-shadow: 0 0 5px red;
+}
+
+.letter{
+    position: absolute;
+    background: red;
+    border-radius: 100%;
+}
+
+.letter.one{
+    border-radius: 0%;
+    height: 50px;
+    width: 7px;
+    top: 20%;
+    left: 10%;
+}
+
+.letter.two{
+    border-radius: 0%;
+    height: 7px;
+    width: 50px;
+    top: 20%;
+    left: 10%;
+}
+
+.letter.three{
+    border-radius: 0%;
+    height: 7px;
+    width: 50px;
+    top: 40%;
+    left: 10%;
+}
+
+.letter.four{
+    border-radius: 0%;
+    height: 7px;
+    width: 50px;
+    top: 60%;
+    left: 10%;
+}
+
+.en{
+    position: relative;
+    border-radius: 0%;
+    color: red;
+    font-size: 3.25em;
+    top: -42%;
+    left: -25%;
+}
