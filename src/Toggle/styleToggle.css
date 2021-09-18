@@ -1,59 +1,45 @@
+/* Those are the settings for the EN (english) - ES (spanish) toggle */
 .toggle{
     height: 100px;
     width: 200px;
     border-radius: 50px;
     margin: auto;
-    background-image: linear-gradient(brown, midnightblue);
+    background-image: linear-gradient(rgb(182, 45, 45), rgb(30, 30, 148));
     position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 2px 1px rgb(35, 121, 35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Change Background color if ES (spanish) activated) */
+.toggle.spanish{
+    background-image: linear-gradient(rebeccapurple, rgba(225,85,30));
+}
+
+/* Circle notch settings */
 .notch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 90px;
     width: 90px;
     border-radius: 50%;
-    background: whitesmoke;
+    background: rgb(154, 218, 173);
     position: absolute;
     top: 5px;
     left: 5px;
     box-shadow: 0 0 5px red;
+    z-index: 9;
+    transition: all 0.5s ease;
 }
 
-.letter{
-    position: absolute;
-    background: red;
-    border-radius: 100%;
-}
-
-.letter.one{
-    border-radius: 0%;
-    height: 50px;
-    width: 7px;
-    top: 20%;
-    left: 10%;
-}
-
-.letter.two{
-    border-radius: 0%;
-    height: 7px;
-    width: 50px;
-    top: 20%;
-    left: 10%;
-}
-
-.letter.three{
-    border-radius: 0%;
-    height: 7px;
-    width: 50px;
-    top: 40%;
-    left: 10%;
-}
-
-.letter.four{
-    border-radius: 0%;
-    height: 7px;
-    width: 50px;
-    top: 60%;
-    left: 10%;
+/* Change Circle notch settings if ES (spanish) activated) */
+.spanish > .notch {
+    background: rgb(190, 233, 197);
+    box-shadow: 0 0 5px rgb(230, 230, 230);
+    transform: translate(100px, 0);
 }
 
 .en{
@@ -61,6 +47,33 @@
     border-radius: 0%;
     color: red;
     font-size: 3.25em;
-    top: -42%;
-    left: -25%;
+    user-select: none;
+    z-index: 10;
+}
+
+.es{
+    position: relative;
+    border-radius: 0%;
+    color: black;
+    font-size: 3.25em;
+    right: -25%;
+    user-select: none;
+    z-index: 1;
+}
+
+.spanish .en {
+    transition: all 0.5s ease;
+}
+
+.spanish .es {
+    transform: translate(-100px, 0);
+    transition: all 0.5s ease;
+}
+
+.english .en {
+    transition: all 0.5s ease;
+}
+
+.english .es {
+    transition: all 0.5s ease;
 }
