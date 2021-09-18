@@ -29,19 +29,20 @@
     background: rgb(154, 218, 173);
     position: absolute;
     top: 5px;
-    left: 5px;
+    left: 7px;
     box-shadow: 0 0 5px red;
     z-index: 9;
-    transition: all 0.5s ease;
+    transition: all 0.75s ease;
 }
 
 /* Change Circle notch settings if ES (spanish) activated) */
 .spanish > .notch {
     background: rgb(190, 233, 197);
     box-shadow: 0 0 5px rgb(230, 230, 230);
-    transform: translate(100px, 0);
+    transform: translate(105%, 0);
 }
 
+/* Red font EN (Inside (Green) Circle) */
 .en{
     position: relative;
     border-radius: 0%;
@@ -51,6 +52,7 @@
     z-index: 10;
 }
 
+/* Black font ES inside Toggle outside (Green) Circle) */
 .es{
     position: relative;
     border-radius: 0%;
@@ -61,19 +63,16 @@
     z-index: 1;
 }
 
-.spanish .en {
-    transition: all 0.5s ease;
-}
-
+/* (Black font) Transition ES to EN */
 .spanish .es {
     transform: translate(-100px, 0);
     transition: all 0.5s ease;
 }
 
-.english .en {
-    transition: all 0.5s ease;
-}
+/* (Black font) Transition EN to ES */
+.english .es {    transition: all 0.5s ease;}
 
-.english .es {
-    transition: all 0.5s ease;
-}
+/* There is no need to apply below comments due that
+(Red font) is inside (Green) Circle.
+.spanish .en {    transition: all 0.5s ease;}
+.english .en {    transition: all 0.5s ease;}*/
